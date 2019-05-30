@@ -41,8 +41,8 @@ class CurrentTimestamp(object):
     def patch(cls, field):
         orig_pre_save = field.pre_save
         orig_prep_db = field.get_db_prep_value
-        orig_prep_lookup = field.get_prep_lookup
-        orig_db_prep_lookup = field.get_db_prep_lookup
+        #orig_prep_lookup = field.get_prep_lookup
+        #orig_db_prep_lookup = field.get_db_prep_lookup
 
         def pre_save(self, model_instance, add):
             """
@@ -74,8 +74,8 @@ class CurrentTimestamp(object):
 
         field.pre_save = pre_save
         field.get_db_prep_value = prep_db_value
-        field.get_prep_lookup = prep_lookup
-        field.get_db_prep_lookup = prep_db_lookup
+        #field.get_prep_lookup = prep_lookup
+        #field.get_db_prep_lookup = prep_db_lookup
 
 
 def init():
