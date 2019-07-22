@@ -7,7 +7,7 @@ from setuptools import find_packages
 
 setup(
     name='django-pg-current-timestamp',
-    version='0.2.4',
+    version='0.3.0',
     author='Jay Taylor',
     author_email='jay@jaytaylor.com',
     packages=find_packages(),
